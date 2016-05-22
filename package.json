@@ -1,0 +1,29 @@
+{
+  "name": "weaver-commons-js",
+  "version": "0.0.1",
+  "description": "Elementary components",
+  "author": {
+    "name": "Bastiaan Bijl",
+    "url": "http://weaverplatform.com",
+    "email": "mail@weaverplatform.com"
+  },
+  "readme": "README.md",
+  "main": "lib/index.js",
+  "license": "GPL-3.0",
+  "repository": {},
+  "devDependencies": {
+    "coffee-script": "^1.9.3"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "scripts": {
+    "prepublish": "coffee -o lib -c src"
+  },
+  "keywords": [
+    "weaver"
+  ],
+  "bugs": {
+    "url": "https://github.com/weaverplatform/weaver-commons-js/issues"
+  }
+}
