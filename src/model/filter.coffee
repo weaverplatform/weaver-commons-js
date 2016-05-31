@@ -5,6 +5,7 @@ module.exports =
 
       @conditions = []
 
+    # currently implemented operations: 'any-individual', 'this-individual'
     addIndividualCondition: (operation, individual) ->
       @conditions.push({
         operation: operation
@@ -12,6 +13,7 @@ module.exports =
         conditiontype: 'individual'
       })
 
+    # currently implemented operations: 'any-value', 'this-value'
     addValueCondition: (operation, value) ->
       @conditions.push({
         operation: operation
