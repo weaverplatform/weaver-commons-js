@@ -18,7 +18,7 @@ module.exports =
       @conditions.push({
         operation: operation
         value: value
-        conditiontype: 'value'
+        conditiontype: 'string'
       })
 
     addViewCondition: (operation, view) ->
