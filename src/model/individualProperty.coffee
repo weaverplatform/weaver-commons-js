@@ -1,8 +1,7 @@
 ###
  Class to deal with $INDIVIDUAL_PROPERTY
 filter.
-An object considered as $INDIVIDUAL_PROPERTY
-is something like:
+An object considered as $INDIVIDUAL_PROPERTY is something like:
 
 
 "payload":
@@ -44,7 +43,6 @@ module.exports =
         @object = playload.relations.object
 
       catch error
-        # console.log error
         return null
 
 
@@ -55,5 +53,3 @@ module.exports =
 
       else
         return false
-
-    # constructor: (@id, @subject, @predicate, @object) ->

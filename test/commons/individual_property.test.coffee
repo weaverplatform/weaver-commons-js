@@ -1,10 +1,10 @@
-require("./test-suite")()
-IndividualProperty = require('../lib/model/individualProperty.js')
+require("../test-suite")()
+IndividualProperty = require('../../src/model/individualProperty')
 
 describe 'Individual Property', ->
 
   payload_ok = null
-  payload_ko = null
+  payload_ko_id = null
 
   beforeEach ->
     payload_ok = {
@@ -48,11 +48,8 @@ describe 'Individual Property', ->
       console.log 'error'
 
   it 'should fails on create a instance of $INDIVIDUAL_PROPERTY because there is no id', (done) ->
-    individual_property = new IndividualProperty(payload_ko)
+    individual_property = new IndividualProperty(payload_ko_id)
 
-    # console.log '=^^=|_'
-
-    # console.log individual_property
     if individual_property.isValid()
       console.log 'error id: ' + individual_property.id
 

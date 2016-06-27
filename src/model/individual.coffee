@@ -1,7 +1,6 @@
 ###
  Object to work with $INDIVIDUAL
- an object considered as $INDIVIDUAL
- is something like:
+ an object considered as $INDIVIDUAL is something like:
 
  "payload":
    {
@@ -27,7 +26,7 @@ module.exports =
       try
         @id = payload.id
       catch error
-        return false
+        return null
 
     ###
      taking a look if this object is correct

@@ -4,8 +4,9 @@ module.exports = ->
   )
 
   # Init
-  Promise = require('bluebird')
-  chai = require('chai')
+  Promise        = require('bluebird')
+  chai           = require('chai')
+  sinon          = require('sinon')
   chaiAsPromised = require('chai-as-promised')
 
   chai.use(chaiAsPromised);

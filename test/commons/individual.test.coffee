@@ -1,5 +1,5 @@
-require("./test-suite")()
-Individual = require('../lib/model/individual.js')
+require("../test-suite")()
+Individual = require('../../src/model/individual')
 
 describe 'Individual', ->
 
