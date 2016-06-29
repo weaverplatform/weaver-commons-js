@@ -25,6 +25,7 @@ An object considered as $INDIVIDUAL_PROPERTY is something like:
 
 module.exports =
   class IndividualProperty
+  # class CreateAction
 
     @id
 
@@ -34,9 +35,11 @@ module.exports =
 
     @object
 
-    constructor: (playload) ->
+    constructor: (payload) ->
+    # constructor: (@payload) ->
 
       try
+        # @payload = JSON.parse(@payload) if typeof payload is 'string'
         @id = playload.id
         @subject = playload.relations.subject
         @predicate = playload.attributes.predicate
