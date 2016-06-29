@@ -14,8 +14,7 @@ describe 'Individual Property', ->
           predicate: "eats",
           type: "$INDIVIDUAL_PROPERTY"
       },
-      relations:
-        {
+      relations:{
           subject: "ciptqwkw800043k6kg0qk1j4w",
           object: "ciptr4z1f00093k6krpx3vuhe"
         }

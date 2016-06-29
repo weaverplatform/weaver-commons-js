@@ -40,17 +40,17 @@ module.exports =
 
       try
         # @payload = JSON.parse(@payload) if typeof payload is 'string'
-        @id = playload.id
-        @subject = playload.relations.subject
-        @predicate = playload.attributes.predicate
-        @object = playload.relations.object
+        @id = payload.id
+        @subject = payload.relations.subject
+        @predicate = payload.attributes.predicate
+        @object = payload.relations.object
 
       catch error
         return null
 
 
     isValid: () ->
-
+      
       if @id && @subject && @predicate && @object
         return true
 
