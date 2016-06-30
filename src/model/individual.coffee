@@ -20,20 +20,17 @@
 module.exports =
   class Individual
 
-    @id
-
     constructor: (payload) ->
+
       try
         @id = payload.id
       catch error
         return null
 
+
     ###
      taking a look if this object is correct
     ###
 
-    isValid: () ->
-      if @id
-        return true
-      else
-        return false
+    isValid: ->
+      @id?

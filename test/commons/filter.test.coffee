@@ -8,7 +8,7 @@ describe 'Filter', ->
   value_property = null
 
   beforeEach ->
-    individual = {
+    individual =
         type: "$INDIVIDUAL",
         id: "ciptr4z1f00093k6krpx3vuhe",
         attributes: {
@@ -16,9 +16,9 @@ describe 'Filter', ->
             type: "$INDIVIDUAL"
         },
         relations: { }
-      }
 
-    value_property = {
+
+    value_property =
         type: "$VALUE_PROPERTY",
         id: "ciptr4z1g000d3k6kiybrvep4",
         attributes:{
@@ -29,16 +29,14 @@ describe 'Filter', ->
         relations: {
           subject: "ciptr4z1f00093k6krpx3vuhe"
         }
-      }
 
 
 
-  it 'should init Filters', (done) ->
+
+  it 'should init Filters', ->
     filter = new Filter()
-    done()
 
-  it 'should add Individual Condition', (done) ->
+
+  it 'should add Individual Condition', ->
     filter = new Filter(value_property.attributes.predicate)
     cond = filter.addIndividualCondition('equals', new Individual(individual))
-    console.log cond
-    done()

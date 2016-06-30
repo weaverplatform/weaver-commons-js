@@ -26,14 +26,6 @@ an object considered as $VALUE_PROPERTY is something like:
 module.exports =
   class ValueProperty
 
-    @id
-
-    @subject
-
-    @predicate
-
-    @object
-
     constructor: (playload) ->
 
       try
@@ -45,10 +37,6 @@ module.exports =
       catch error
         return null
 
-    isValid: () ->
+    isValid: ->
 
-      if @id && @subject && @predicate && @object
-        return true
-
-      else
-        return false
+      @id? and @subject? and @predicate? and @object?

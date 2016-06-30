@@ -25,18 +25,8 @@ An object considered as $INDIVIDUAL_PROPERTY is something like:
 
 module.exports =
   class IndividualProperty
-  # class CreateAction
-
-    @id
-
-    @subject
-
-    @predicate
-
-    @object
 
     constructor: (payload) ->
-    # constructor: (@payload) ->
 
       try
         # @payload = JSON.parse(@payload) if typeof payload is 'string'
@@ -49,10 +39,6 @@ module.exports =
         return null
 
 
-    isValid: () ->
-      
-      if @id && @subject && @predicate && @object
-        return true
+    isValid: ->
 
-      else
-        return false
+      @id? and @subject? and @predicate? and @object?

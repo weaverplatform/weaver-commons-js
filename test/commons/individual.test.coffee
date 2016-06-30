@@ -7,7 +7,7 @@ describe 'Individual', ->
   payload_ko = null
 
   beforeEach ->
-    payload_ok = {
+    payload_ok =
         type: "$INDIVIDUAL",
         id: "ciptr4z1f00093k6krpx3vuhe",
         attributes: {
@@ -15,31 +15,23 @@ describe 'Individual', ->
             type: "$INDIVIDUAL"
         },
         relations: { }
-      }
 
-    payload_ko = {
+
+    payload_ko =
         type: "$INDIVIDUAL",
         attributes: {
             name: "Unnamed",
             type: "$INDIVIDUAL"
         },
         relations: { }
-      }
 
 
-  it 'should create a instance of $INDIVIDUAL', (done) ->
+
+  it 'should create a instance of $INDIVIDUAL', ->
     individual = new Individual(payload_ok)
-    if individual.isValid()
-      console.log "       Individual id: " + individual.id
-      done()
+    expect(individual.isValid()).to.equal(true)
 
-    else
-      console.log 'error'
 
-  it 'should fails on create a instance of $INDIVIDUAL because there is no id', (done) ->
+  it 'should fails on create a instance of $INDIVIDUAL because there is no id', ->
     individual = new Individual(payload_ko)
-    if individual.isValid()
-      console.log 'error id: ' + individual.id
-
-    else
-      done()
+    expect(individual.isValid()).to.equal(false)
