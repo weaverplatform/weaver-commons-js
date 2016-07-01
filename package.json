@@ -7,7 +7,6 @@
     "url": "http://weaverplatform.com",
     "email": "mail@weaverplatform.com"
   },
-  "readme": "README.md",
   "main": "lib/index.js",
   "license": "GPL-3.0",
   "repository": {},
