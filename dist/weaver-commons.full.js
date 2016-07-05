@@ -60,6 +60,10 @@
 
   })();
 
+  if (typeof window !== "undefined" && window !== null) {
+    window.Filter = Filter;
+  }
+
 }).call(this);
 
 },{}],3:[function(require,module,exports){
@@ -107,6 +111,10 @@
     return Individual;
 
   })();
+
+  if (typeof window !== "undefined" && window !== null) {
+    window.Individual = Individual;
+  }
 
 }).call(this);
 
@@ -160,6 +168,10 @@ An object considered as $INDIVIDUAL_PROPERTY is something like:
 
   })();
 
+  if (typeof window !== "undefined" && window !== null) {
+    window.IndividualProperty = IndividualProperty;
+  }
+
 }).call(this);
 
 },{}],5:[function(require,module,exports){
@@ -189,6 +201,10 @@ An object considered as $INDIVIDUAL_PROPERTY is something like:
     return Predicate;
 
   })();
+
+  if (typeof window !== "undefined" && window !== null) {
+    window.Predicate = Predicate;
+  }
 
 }).call(this);
 
@@ -240,6 +256,10 @@ an object considered as $VALUE_PROPERTY is something like:
     return ValueProperty;
 
   })();
+
+  if (typeof window !== "undefined" && window !== null) {
+    window.ValueProperty = ValueProperty;
+  }
 
 }).call(this);
 
