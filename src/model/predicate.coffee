@@ -15,3 +15,7 @@ module.exports =
     isValid: ->
 
       @id? and @name?
+
+
+# Browser export
+window.Predicate = Predicate if window?

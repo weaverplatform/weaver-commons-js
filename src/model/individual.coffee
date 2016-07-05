@@ -34,3 +34,6 @@ module.exports =
 
     isValid: ->
       @id?
+
+# Browser export
+window.Individual = Individual if window?

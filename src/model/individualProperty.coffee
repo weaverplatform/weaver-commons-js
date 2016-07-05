@@ -42,3 +42,7 @@ module.exports =
     isValid: ->
 
       @id? and @subject? and @predicate? and @object?
+
+
+# Browser export
+window.IndividualProperty = IndividualProperty if window?

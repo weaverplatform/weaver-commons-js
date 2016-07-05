@@ -27,3 +27,7 @@ module.exports =
         view: view.id
         conditiontype: 'view'
       })
+
+
+# Browser export
+window.Filter = Filter if window?
