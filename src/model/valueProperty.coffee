@@ -26,13 +26,13 @@ an object considered as $VALUE_PROPERTY is something like:
 module.exports =
   class ValueProperty
 
-    constructor: (playload) ->
+    constructor: (payload) ->
 
       try
-        @id = playload.id
-        @subject = playload.relations.subject
-        @predicate = playload.attributes.predicate
-        @object = playload.attributes.object
+        @id = payload.id
+        @subject = payload.relations.subject
+        @predicate = payload.relations.predicate
+        @object = payload.attributes.object
 
       catch error
         return null
