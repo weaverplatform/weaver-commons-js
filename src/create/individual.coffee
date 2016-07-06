@@ -21,19 +21,20 @@ module.exports =
   class Individual
 
     constructor: (payload) ->
+      payload = JSON.parse(payload) if typeof payload is 'string'
 
-      try
-        @id = payload.id
-      catch error
-        return null
+      try @type = payload.type
+      try @id = payload.id
+      try @attributes = payload.attributes
+      try @relations = payload.relations
 
 
-    ###
-     taking a look if this object is correct
-    ###
+
+
+
 
     isValid: ->
-      @id?
-
-# Browser export
-window.Individual = Individual if window?
+      @type? and @type is '$INDIVIDUAL' and
+      @id? and
+      @attributes? and
+      @relations?

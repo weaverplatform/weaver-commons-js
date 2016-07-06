@@ -1,7 +1,7 @@
 {
   "name": "weaver-commons",
   "main": "dist/weaver-commons.full.js",
-  "version": "0.0.12",
+  "version": "0.1.0",
   "homepage": "https://github.com/weaverplatform/weaver-commons-js",
   "authors": [
     "Bastiaan Bijl <bastiaan@sysunite.com>"
