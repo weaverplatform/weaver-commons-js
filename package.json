@@ -1,6 +1,6 @@
 {
   "name": "weaver-commons-js",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Elementary components",
   "author": {
     "name": "Bastiaan Bijl",
@@ -18,7 +18,18 @@
     "istanbul": "^0.4.3",
     "mocha": "^2.2.5",
     "sinon": "^1.15.4",
-    "bluebird": "~2.10.2"
+    "bluebird": "~2.10.2",
+    "grunt": "~1.0.1",
+    "browserify": "^13.0.0",
+    "grunt-browserify": "^4.0.1",
+    "remapify": "^2.1.0",
+    "grunt-contrib-concat": "1.0.1",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-contrib-clean": "1.0.0",
+    "grunt-contrib-coffee": "1.0.0",
+    "grunt-contrib-uglify": "1.0.1",
+    "load-grunt-tasks": "3.5.0"
   },
   "engines": {
     "node": ">=0.8"
