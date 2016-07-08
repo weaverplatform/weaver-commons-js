@@ -1,5 +1,5 @@
 require("../test-suite")()
-Filter     = require('../../src/create/filter')
+Filter     = require('../../src/model/filter')
 Individual = require('../../src/create/individual')
 
 describe 'Filter', ->

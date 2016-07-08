@@ -8,6 +8,9 @@ WeaverCommons = {
   }
   read: {
     Entity:             require('./read/entity')
+    response: {
+      View:             require('./read/response/view')
+    }
   }
   update: {
     AttributeLink:      require('./update/attribute-link')
@@ -33,6 +36,7 @@ WeaverCommons = {
   }
   model: {
     Filter:             require('./model/filter')
+    View:               require('./model/view')
   }
 }
 module.exports = WeaverCommons

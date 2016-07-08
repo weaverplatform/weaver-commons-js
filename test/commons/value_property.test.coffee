@@ -11,24 +11,24 @@ describe 'Value Property', ->
         type: "$VALUE_PROPERTY",
         id: "ciptr4z1g000d3k6kiybrvep4",
         attributes:{
-          predicate: "rdfs:label",
           object: "Unnamed",
           type: "$VALUE_PROPERTY"
         },
         relations: {
-          subject: "ciptr4z1f00093k6krpx3vuhe"
+          subject: "ciptr4z1f00093k6krpx3vuhe",
+          predicate: "rdfs:label"
         }
 
 
     payload_ko =
         type: "$VALUE_PROPERTY",
         attributes:{
-          predicate: "rdfs:label",
           object: "Unnamed",
           type: "$VALUE_PROPERTY"
         },
         relations: {
-          subject: "ciptr4z1f00093k6krpx3vuhe"
+          subject: "ciptr4z1f00093k6krpx3vuhe",
+          predicate: "rdfs:label"
         }
 
 
