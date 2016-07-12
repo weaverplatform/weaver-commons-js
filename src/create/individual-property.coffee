@@ -38,7 +38,7 @@ module.exports =
     getSubjectId: ->
       @relations.subject
     getPredicateId: ->
-      @relations.predicate
+      @attributes.predicate
     getObjectId: ->
       @relations.object
 
@@ -52,7 +52,7 @@ module.exports =
       @attributes? and
       @relations? and
       @relations.subject? and
-      @relations.predicate? and
+      @attributes.predicate? and
       @relations.object?
 
 
