@@ -11,23 +11,23 @@ describe 'Individual Property', ->
       type: "$INDIVIDUAL_PROPERTY",
       id: "ciptr5cuf000f3k6kyos9083o",
       attributes:{
-          type: "$INDIVIDUAL_PROPERTY"
+          type: "$INDIVIDUAL_PROPERTY",
+          predicate: "eats"
       },
       relations:{
           subject: "ciptqwkw800043k6kg0qk1j4w",
-          predicate: "eats",
           object: "ciptr4z1f00093k6krpx3vuhe"
         }
 
     payload_ko_id =
       type: "$INDIVIDUAL_PROPERTY",
       attributes:{
-          type: "$INDIVIDUAL_PROPERTY"
+          type: "$INDIVIDUAL_PROPERTY",
+          predicate: "eats"
       },
       relations:
         {
           subject: "ciptqwkw800043k6kg0qk1j4w",
-          predicate: "eats",
           object: "ciptr4z1f00093k6krpx3vuhe"
         }
 
