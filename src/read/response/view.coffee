@@ -33,7 +33,7 @@ class View
 
       filterPayload = {
         label: filter._ATTRIBUTES.label
-        predicate: filter._RELATIONS.predicate
+        predicate: filter._ATTRIBUTES.predicate
         celltype: filter._ATTRIBUTES.celltype
         conditions: conditions
       }

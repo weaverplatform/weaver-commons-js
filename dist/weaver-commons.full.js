@@ -5701,7 +5701,7 @@ An object considered as $INDIVIDUAL_PROPERTY is something like:
     };
 
     IndividualProperty.prototype.getPredicateId = function() {
-      return this.relations.predicate;
+      return this.attributes.predicate;
     };
 
     IndividualProperty.prototype.getObjectId = function() {
@@ -5709,7 +5709,7 @@ An object considered as $INDIVIDUAL_PROPERTY is something like:
     };
 
     IndividualProperty.prototype.isValid = function() {
-      return (this.type != null) && this.type === '$INDIVIDUAL_PROPERTY' && (this.id != null) && (this.attributes != null) && (this.relations != null) && (this.relations.subject != null) && (this.relations.predicate != null) && (this.relations.object != null);
+      return (this.type != null) && this.type === '$INDIVIDUAL_PROPERTY' && (this.id != null) && (this.attributes != null) && (this.relations != null) && (this.relations.subject != null) && (this.attributes.predicate != null) && (this.relations.object != null);
     };
 
     return IndividualProperty;
@@ -5851,7 +5851,7 @@ an object considered as $VALUE_PROPERTY is something like:
     };
 
     ValueProperty.prototype.getPredicateId = function() {
-      return this.relations.predicate;
+      return this.attributes.predicate;
     };
 
     ValueProperty.prototype.getValue = function() {
@@ -5863,7 +5863,7 @@ an object considered as $VALUE_PROPERTY is something like:
     };
 
     ValueProperty.prototype.isValid = function() {
-      return (this.type != null) && this.type === '$VALUE_PROPERTY' && (this.id != null) && (this.attributes != null) && (this.attributes.object != null) && (this.relations != null) && (this.relations.subject != null) && (this.relations.predicate != null);
+      return (this.type != null) && this.type === '$VALUE_PROPERTY' && (this.id != null) && (this.attributes != null) && (this.attributes.object != null) && (this.relations != null) && (this.relations.subject != null) && (this.attributes.predicate != null);
     };
 
     return ValueProperty;
@@ -6022,7 +6022,7 @@ an object considered as $VALUE_PROPERTY is something like:
     Filter.prototype.addIndividualCondition = function(operation, individual) {
       return this.conditions.push({
         operation: operation,
-        individual: individual.id,
+        value: individual.id,
         conditiontype: 'individual'
       });
     };
@@ -6038,7 +6038,7 @@ an object considered as $VALUE_PROPERTY is something like:
     Filter.prototype.addViewCondition = function(operation, view) {
       return this.conditions.push({
         operation: operation,
-        view: view.id,
+        value: view.id,
         conditiontype: 'view'
       });
     };
@@ -6263,7 +6263,7 @@ an object considered as $VALUE_PROPERTY is something like:
         }
         filterPayload = {
           label: filter._ATTRIBUTES.label,
-          predicate: filter._RELATIONS.predicate._ATTRIBUTES.name,
+          predicate: filter._ATTRIBUTES.predicate,
           celltype: filter._ATTRIBUTES.celltype,
           conditions: conditions
         };
