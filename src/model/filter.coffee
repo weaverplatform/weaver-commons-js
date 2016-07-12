@@ -9,7 +9,7 @@ module.exports =
     addIndividualCondition: (operation, individual) ->
       @conditions.push({
         operation: operation
-        individual: individual.id
+        value: individual.id
         conditiontype: 'individual'
       })
 
@@ -24,6 +24,6 @@ module.exports =
     addViewCondition: (operation, view) ->
       @conditions.push({
         operation: operation
-        view: view.id
+        value: view.id
         conditiontype: 'view'
       })
