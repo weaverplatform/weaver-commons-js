@@ -1,5 +1,5 @@
 require("../test-suite")()
-ValueProperty = require('../../src/create/value-property')
+ValueProperty = require('../../src/operations/create/request/value-property')
 
 describe 'Value Property', ->
 

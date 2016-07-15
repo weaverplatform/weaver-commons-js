@@ -1,5 +1,5 @@
 require("../test-suite")()
-IndividualProperty = require('../../src/create/individual-property')
+IndividualProperty = require('../../src/operations/create/request/individual-property')
 
 describe 'Individual Property', ->
 
