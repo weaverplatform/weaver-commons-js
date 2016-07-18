@@ -28,6 +28,8 @@ module.exports =
       opts = JSON.parse(opts) if typeof opts is 'string'
 
 
+      # If I have an individual I'll return an Entity_Individual, a Node
+
       if opts.individual?
 
         @_ATTRIBUTES = {}
@@ -42,7 +44,8 @@ module.exports =
           try @_META.type = indi.type
           try @_META.id = indi.id
 
-      # else
+
+      # If I have a name and an id I will return a Entity_Individual
 
       if opts.name? and opts.id?
 
@@ -54,13 +57,19 @@ module.exports =
         try @_META.type = '$INDIVIDUAL'
         try @_META.id = opts.id
 
-      if opts.entity?
+
+      # If I have a Entity_Individual I will return an Individual
+
+      if opts.entity_individual?
 
         try @individual = new Individual({
           type:"$INDIVIDUAL",
-          id: opts.entity._META.id,
+          id: opts.entity_individual._META.id,
           attributes:{
-            "name":opts.entity._ATTRIBUTES.name,
+            "name":opts.entity_individual._ATTRIBUTES.name,
             },
           relations:""
         })
+
+        # TODO: make some checks like: Is a valid (EntityIndividual)?
+        # TODO: implement some getters and setters
