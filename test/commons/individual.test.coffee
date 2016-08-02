@@ -1,5 +1,5 @@
 require("../test-suite")()
-Individual = require('../../src/create/individual')
+Individual = require('../../src/operations/create/request/individual')
 
 describe 'Individual', ->
 

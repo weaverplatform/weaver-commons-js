@@ -10,12 +10,12 @@ An object considered as $INDIVIDUAL_PROPERTY is something like:
   "id": "ciptr5cuf000f3k6kyos9083o",
   "attributes":
   {
-    "type": "$INDIVIDUAL_PROPERTY"
+    "type": "$INDIVIDUAL_PROPERTY",
+    "predicate": "..." -----> ?
   },
   "relations":
   {
     "subject": "ciptqwkw800043k6kg0qk1j4w",
-    "predicate": "...",
     "object": "ciptr4z1f00093k6krpx3vuhe"
   }
 }
@@ -37,12 +37,10 @@ module.exports =
 
     getSubjectId: ->
       @relations.subject
-    getPredicateId: ->
+    getPredicate: ->
       @attributes.predicate
     getObjectId: ->
       @relations.object
-
-
 
 
 
@@ -54,5 +52,3 @@ module.exports =
       @relations.subject? and
       @attributes.predicate? and
       @relations.object?
-
-

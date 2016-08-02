@@ -1,5 +1,5 @@
 require("../test-suite")()
-ValueProperty = require('../../src/create/value-property')
+ValueProperty = require('../../src/operations/create/request/value-property')
 
 describe 'Value Property', ->
 
@@ -40,3 +40,15 @@ describe 'Value Property', ->
   it 'should fails on create a instance of $INDIVIDUAL_PROPERTY because there is no id', ->
     value_property = new ValueProperty(payload_ko)
     expect(value_property.isValid()).to.equal(false)
+
+  it 'should return a subject id', ->
+    value_property = new ValueProperty(payload_ok)
+    expect(value_property.getSubjectId()).to.equal('ciptr4z1f00093k6krpx3vuhe')
+
+  it 'should return a predicate', ->
+    value_property = new ValueProperty(payload_ok)
+    expect(value_property.getPredicate()).to.equal('rdfs:label')
+
+  it 'should return a value', ->
+    value_property = new ValueProperty(payload_ok)
+    expect(value_property.getValue()).to.equal('Unnamed')

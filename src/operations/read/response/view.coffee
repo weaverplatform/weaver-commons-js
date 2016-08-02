@@ -41,3 +41,5 @@ class View
       filters.push(filterPayload)
 
     filters
+
+

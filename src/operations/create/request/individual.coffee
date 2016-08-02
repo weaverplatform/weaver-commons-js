@@ -29,10 +29,6 @@ module.exports =
       try @relations = payload.relations
 
 
-
-
-
-
     isValid: ->
       @type? and @type is '$INDIVIDUAL' and
       @id? and

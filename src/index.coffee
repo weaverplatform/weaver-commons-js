@@ -1,42 +1,47 @@
 WeaverCommons = {
   create: {
-    Entity:             require('./create/entity')
-    Predicate:          require('./create/predicate')
-    Individual:         require('./create/individual')
-    IndividualProperty: require('./create/individual-property')
-    ValueProperty:      require('./create/value-property')
+    Entity:                   require('./operations/create/request/entity')
+    Predicate:                require('./operations/create/request/predicate')
+    Individual:               require('./operations/create/request/individual')
+    IndividualProperty:       require('./operations/create/request/individual-property')
+    ValueProperty:            require('./operations/create/request/value-property')
   }
   read: {
-    Entity:             require('./read/entity')
+    Entity:                   require('./operations/read/entity')
     response: {
-      View:             require('./read/response/view')
+      View:                   require('./operations/read/response/view')
     }
   }
   update: {
-    AttributeLink:      require('./update/attribute-link')
-    EntityLink:         require('./update/entity-link')
+    AttributeLink:            require('./operations/update/attribute-link')
+    EntityLink:               require('./operations/update/entity-link')
   }
   destroyAttribute: {
-    Entity:             require('./destroy-attribute/entity')
+    Entity:                   require('./operations/destroy-attribute/entity')
   }
   destroyEntity: {
-    Entity:             require('./destroy-entity/entity')
+    Entity:                   require('./operations/destroy-entity/entity')
   }
   link: {
-    Link:               require('./link/link')
+    Link:                     require('./operations/link/link')
   }
   unlink: {
-    Link:               require('./unlink/link')
+    Link:                     require('./operations/unlink/link')
   }
   nativeQuery: {
-    Query:              require('./native-query/query')
+    Query:                    require('./operations/native-query/query')
   }
   queryFromView: {
-    View:               require('./query-from-view/view')
+    View:                     require('./operations/query-from-view/view')
   }
   model: {
-    Filter:             require('./model/filter')
-    View:               require('./model/view')
+    Filter:                   require('./handlers/filter')
+    View:                     require('./handlers/view')
+  }
+  etntities: {
+    EntityIndividual:         require('./entities/entity-individual')
+    EntityIndividualProperty: require('./entities/entity-individual-property')
+    EntityValueProperty:      require('./entities/entity-value-property')
   }
 }
 module.exports = WeaverCommons
