@@ -9,13 +9,13 @@ an object considered as $VALUE_PROPERTY is something like:
     "id": "ciptr4z1g000d3k6kiybrvep4",
     "attributes":
     {
-      "predicate": "rdfs:label", ---> ?
       "object": "Unnamed", -------> ?
       "type": "$VALUE_PROPERTY" ---> repeated?
     },
     "relations":
     {
       "subject": "ciptr4z1f00093k6krpx3vuhe"
+      "predicate": "circhqgcf00003k6poa8w0g0q",
     }
   }
 
@@ -37,8 +37,8 @@ module.exports =
 
     getSubjectId: ->
       @relations.subject
-    getPredicate: ->
-      @attributes.predicate  
+    getPredicateId: ->
+      @relations.predicate  
     getValue: ->
       @attributes.object
     getDatatype: ->
@@ -53,4 +53,4 @@ module.exports =
       @attributes.object? and
       @relations? and
       @relations.subject? and
-      @attributes.predicate?
+      @relations.predicate?
