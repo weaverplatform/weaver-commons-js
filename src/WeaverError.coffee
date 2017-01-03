@@ -1,60 +1,35 @@
 WeaverError = {}
 
-#
 # Error code indicating some error other than those enumerated here.
-# @property OTHER_CAUSE
-# @static
-# @final
-#
 WeaverError.OTHER_CAUSE = -1
 
-#
+
 # Error code indicating that something has gone wrong with the server.
 # If you get this error code, it is Weavers's fault. Contact us at
 # https://weaverplatform.com/help
-# @property INTERNAL_SERVER_ERROR
-# @static
-# @final
-#
 WeaverError.INTERNAL_SERVER_ERROR = 1
 
-#
+
 # Error code indicating the connection to the Parse servers failed.
-# @property CONNECTION_FAILED
-# @static
-# @final
-#
 WeaverError.CONNECTION_FAILED = 100
 
 
 # Error code indicating the specified Node doesn't exist.
 WeaverError.NODE_NOT_FOUND = 101
 
-#
+
 # Error code indicating you tried to query with a datatype that doesn't
 # support it, like exact matching an array or object.
-# @property INVALID_QUERY
-# @static
-# @final
-#
 WeaverError.INVALID_QUERY = 102
 
-#
+
 # Error code indicating a missing or invalid classname. Classnames are
 # case-sensitive. They must start with a letter, and a-zA-Z0-9_ are the
 # only valid characters.
-# @property INVALID_CLASS_NAME
-# @static
-# @final
-#
 WeaverError.INVALID_CLASS_NAME = 103
 
-#
+
 # Error code indicating an unspecified object id.
-# @property MISSING_OBJECT_ID
-# @static
-# @final
-#
 WeaverError.MISSING_OBJECT_ID = 104
 
 #
@@ -413,6 +388,11 @@ WeaverError.ACCOUNT_ALREADY_LINKED = 208
 # @final
 #
 WeaverError.INVALID_SESSION_TOKEN = 209
+
+
+WeaverError.USERNAME_NOT_FOUND = 210
+
+WeaverError.PASSWORD_INCORRECT = 211
 
 #
 # Error code indicating that a user cannot be linked to an account because
