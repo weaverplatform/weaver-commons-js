@@ -1,7 +1,7 @@
 {
-  "name": "weaver-commons-js",
-  "version": "0.1.4",
-  "description": "Elementary components",
+  "name": "weaver-commons",
+  "version": "2.0.0-beta.1",
+  "description": "Elementary components such as Error codes and WriteOperations",
   "author": {
     "name": "Bastiaan Bijl",
     "url": "http://weaverplatform.com",
@@ -32,11 +32,11 @@
     "load-grunt-tasks": "3.5.0"
   },
   "engines": {
-    "node": ">=0.8"
+    "node": ">=6.9",
+    "npm":  ">=3.10"
   },
   "scripts": {
-    "prepublish": "./node_modules/coffee-script/bin/coffee -o lib -c src",
-    "test": "./node_modules/.bin/mocha && ./node_modules/.bin/istanbul report"
+    "prepublish": "./node_modules/coffee-script/bin/coffee -o lib -c src"
   },
   "keywords": [
     "weaver"
