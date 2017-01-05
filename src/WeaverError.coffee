@@ -421,6 +421,13 @@ WeaverError.INVALID_LINKED_SESSION = 251
 #
 WeaverError.UNSUPPORTED_SERVICE = 252
 
+
+WeaverError.DATATYPE_INVALID = 322;
+WeaverError.DATATYPE_UNSUPPORTED = 333;
+
+WeaverError.WRITE_OPERATION_NOT_EXISTS = 344;
+WeaverError.WRITE_OPERATION_INVALID = 345;
+
 #
 # Error code indicating that there were multiple errors. Aggregate errors
 # have an "errors" property, which is an array of error objects with more
