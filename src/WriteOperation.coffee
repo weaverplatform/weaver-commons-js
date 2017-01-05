@@ -1,19 +1,19 @@
-Code      = {}
+Action    = {}
 Signature = {}
 
 # Helper method
-signature = (code, attributes) ->
-  Signature[code] = {}
-  Signature[code][attribute] = null for attribute in attributes
-  code
+signature = (action, attributes) ->
+  Signature[action] = {}
+  Signature[action][attribute] = null for attribute in attributes
+  action
 
-Code.CREATE_NODE            = signature('create-node',        ['id'])
-Code.REMOVE_NODE            = signature('remove-node',        ['id'])
-Code.UPDATE_ATTRIBUTE       = signature('update-attribute',   ['id', 'key', 'value', 'datatype'])
-Code.REMOVE_ATTRIBUTE       = signature('remove-attribute',   ['id', 'key'])
-Code.UPDATE_RELATION        = signature('update-relation',    ['from', 'key', 'to' ])             # only on relation with this key can exist between these two ids
-Code.REMOVE_RELATION        = signature('remove-relation',    ['from', 'key', 'to' ])
-Code.OBJECTIFY_RELATION     = signature('objectify-relation', ['from', 'key', 'to', 'id' ])
-Code.MERGE_NODES            = signature('merge-nodes',        ['id_into', 'id_merge'])
+Action.CREATE_NODE            = signature('create-node',        ['id'])
+Action.REMOVE_NODE            = signature('remove-node',        ['id'])
+Action.UPDATE_ATTRIBUTE       = signature('update-attribute',   ['id', 'key', 'value', 'datatype'])
+Action.REMOVE_ATTRIBUTE       = signature('remove-attribute',   ['id', 'key'])
+Action.UPDATE_RELATION        = signature('update-relation',    ['from', 'key', 'to' ])             # only on relation with this key can exist between these two ids
+Action.REMOVE_RELATION        = signature('remove-relation',    ['from', 'key', 'to' ])
+Action.OBJECTIFY_RELATION     = signature('objectify-relation', ['from', 'key', 'to', 'id' ])
+Action.MERGE_NODES            = signature('merge-nodes',        ['id_into', 'id_merge'])
 
-module.exports= {Code, Signature}
+module.exports = {Action, Signature}
