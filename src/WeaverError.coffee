@@ -422,6 +422,26 @@ WeaverError.INVALID_LINKED_SESSION = 251
 WeaverError.UNSUPPORTED_SERVICE = 252
 
 #
+# A value can not be parsed as the specified datatype
+#
+WeaverError.DATATYPE_INVALID = 322;
+
+#
+# A specified datatype (e.g. 'number') is not supported
+#
+WeaverError.DATATYPE_UNSUPPORTED = 333;
+
+#
+# A specified write operation (e.g. 'merge-nodes') is not supported
+#
+WeaverError.WRITE_OPERATION_NOT_EXISTS = 344;
+
+#
+# Some necessary fields in the write operation json is missing
+#
+WeaverError.WRITE_OPERATION_INVALID = 345;
+
+#
 # Error code indicating that there were multiple errors. Aggregate errors
 # have an "errors" property, which is an array of error objects with more
 # detail about each error that occurred.
