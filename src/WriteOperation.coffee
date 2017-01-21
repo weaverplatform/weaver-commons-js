@@ -9,7 +9,7 @@ define = (action, attributes) ->
 
 Action.CREATE_NODE            = define 'create-node',        ['id']
 Action.REMOVE_NODE            = define 'remove-node',        ['id']
-Action.UPDATE_ATTRIBUTE       = define 'update-attribute',   ['id', 'key', 'value', 'datatype']
+Action.CREATE_ATTRIBUTE       = define 'create-attribute',   ['id', 'key', 'value', 'datatype']
 Action.REMOVE_ATTRIBUTE       = define 'remove-attribute',   ['id', 'key']
 Action.CREATE_RELATION        = define 'create-relation',    ['from', 'key', 'to' ]          # only one relation with this key can exist between these two node ids
 Action.REMOVE_RELATION        = define 'remove-relation',    ['from', 'key', 'to' ]
